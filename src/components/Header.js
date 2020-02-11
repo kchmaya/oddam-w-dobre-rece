@@ -5,16 +5,16 @@ import {Link} from 'react-scroll';
 class Header extends Component {
     render() {
         return (
-            <div className='header'>
+            <section className='header'>
                 <div className='header-login'>
                     <ul>
                         <li>
-                            <NavLink className="header-login-nav" to="/login">
+                            <NavLink className='header-login-nav' to='/login'>
                                 Zaloguj
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink className="header-login-nav" to="/register">
+                            <NavLink className='header-login-nav' to='/register'>
                                 Załóż konto
                             </NavLink>
                         </li>
@@ -23,7 +23,7 @@ class Header extends Component {
                 <div className='header-menu'>
                     <ul>
                         <li>
-                            <Link to="/">
+                            <Link to='/'>
                                 Start
                             </Link>
                         </li>
@@ -49,7 +49,7 @@ class Header extends Component {
                         </li>
                     </ul>
                 </div>
-            </div>
+            </section>
         );
     }
 }

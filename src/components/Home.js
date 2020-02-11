@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Header from './Header';
-// import MainSection from './MainSection';
+import MainSection from './MainSection';
 // import ThreeColumns from './ThreeColumns';
 // import Steps from './Steps';
 // import About from './About';
@@ -14,7 +14,7 @@ class Home extends Component {
         return (
             <>
                 <Header />
-            {/*    <MainSection />*/}
+                <MainSection />
             {/*    <ThreeColumns />*/}
             {/*    <Steps />*/}
             {/*    <About />*/}
