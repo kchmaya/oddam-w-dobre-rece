@@ -28,7 +28,7 @@ class Header extends Component {
                             </Link>
                         </li>
                         <li>
-                            <Link to="">
+                            <Link activeClass='active' to='steps' spy={true} smooth={true} offset={50} duration={500}>
                                 O co chodzi?
                             </Link>
                         </li>
