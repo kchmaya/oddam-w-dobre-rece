@@ -7,7 +7,7 @@
     display: block;
     height: auto;
     margin-left: -23%;
-    margin-top: -10%;
+    margin-top: -8%;
     max-width: 73%;
   }
 
@@ -21,26 +21,45 @@
     width: 100%;
 
     .main-section-title {
-      font-size: 2.5rem;
+      font-size: 2rem;
       font-weight: 500;
-      line-height: 3.5rem;
+      line-height: 3rem;
+      color: $color-dark-brown;
       text-align: center;
+
+      span {
+        display: block;
+      }
+    }
+
+    .decoration {
+      margin: 2rem;
     }
 
     .main-section-btns {
       display: flex;
 
+      li:first-of-type {
+        padding: 0.5rem 5rem;
+      }
+
       li {
-        border: 1px solid $color-dark-brown;
+        border: 1px solid $color-grey;
         font-size: 2rem;
-        margin: 1rem 2rem;
-        padding: 1rem 6rem;
+        margin: 1rem 1rem;
+        padding: 0.5rem 3rem;
         text-align: center;
+
+        span {
+          display: block;
+        }
 
         .btn-link {
           color: $color-dark-brown;
           text-transform: uppercase;
-          font-weight: 400;
+          font-weight: 300;
+          text-decoration: none;
+
         }
       }
     }
