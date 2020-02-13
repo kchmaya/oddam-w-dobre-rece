@@ -38,7 +38,7 @@ class Header extends Component {
                             </Link>
                         </li>
                         <li>
-                            <Link to="">
+                            <Link activeClass='organisation' to='about' spy={true} smooth={true} offset={50} duration={500}>
                                 Fundacja i organizacje
                             </Link>
                         </li>
