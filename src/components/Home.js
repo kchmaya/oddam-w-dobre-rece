@@ -6,7 +6,7 @@ import Steps from './Steps';
 import About from './About';
 import Organisations from './Organisations';
 import Contact from './Contact';
-// import Footer from './Footer';
+import Footer from './Footer';
 
 
 class Home extends Component {
@@ -20,7 +20,7 @@ class Home extends Component {
                 <About />
                 <Organisations />
                 <Contact />
-            {/*    <Footer />*/}
+                <Footer />
             </>
         );
     }

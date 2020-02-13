@@ -1,0 +1,35 @@
+@import "settings/colors";
+
+.footer {
+  color: $color-dark-brown;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+
+  .footer-elements {
+    top: -3rem;
+    position: absolute;
+    overflow: visible;
+    display: flex;
+
+    .footer-text {
+      font-size: 1.05rem;
+    }
+
+    .footer-sm-icon {
+      position: absolute;
+      cursor: pointer;
+
+      &:first-of-type {
+        left: 50rem;
+      }
+
+      &:last-of-type {
+        left: 53rem;
+      }
+    }
+  }
+}
