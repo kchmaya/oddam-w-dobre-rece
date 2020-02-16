@@ -17,6 +17,11 @@ class Contact extends Component {
         return re.test(String(email).toLowerCase());
     };
 
+    validateName = name => {
+        let re =  /^[a-zA-Z]{1,200}$/;
+        return re.test(String(name).toString());
+    };
+
     handleChange = event => {
         this.setState({
             [event.target.name]: event.target.value
@@ -45,7 +50,7 @@ class Contact extends Component {
         let emailOk = true;
         let textOk = true;
 
-        if (data.name.indexOf(" ") !== 0) {
+        if (!this.validateName(data.name)) {
             this.setState(state => ({
                 errorName: "Podane imię jest nieprawidłowe!"
             }));

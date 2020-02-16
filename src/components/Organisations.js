@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import {NavLink, Switch, Route} from 'react-router-dom';
-import Login from "./UserLog/Login";
+import {NavLink, HashRouter, Switch, Route} from 'react-router-dom';
 
 
 const Fundations = () => {
@@ -144,14 +143,10 @@ const LocalOrganisations = () => {
 
 class Organisations extends Component {
 
-    showOnClick(content) {
-        // content.preventDefault();
-        this.setState({currentContent: content})
-    }
 
 
     render() {
-        // const content = this.state.currentContent;
+
 
         return (
             <section className='organisation-section' id='organisation'>
@@ -160,31 +155,34 @@ class Organisations extends Component {
                     <img src={require('../assets/Decoration.svg')} alt='' className='organisation-decoration'/>
                     <ul className='organisation-choice'>
                         <li>
-                            <NavLink to='' onClick={()=> this.showOnClick('fundations')} className='organisation-link'> Fundacjom</NavLink>
+                            <NavLink to='/fundations' className='organisation-link'> Fundacjom </NavLink>
                         </li>
                         <li>
-                            <NavLink to='' onClick={this.showOnClick} className='organisation-link'> Organizacjom <span> pozarządowym </span></NavLink>
+                            <NavLink to='/organisations' className='organisation-link'> Organizacjom <span> pozarządowym </span></NavLink>
                         </li>
                         <li>
-                            <NavLink to='' onClick={this.showOnClick} className='organisation-link'> Lokalnym <span> zbiórkom </span></NavLink>
+                            <NavLink to='/local_organisations' className='organisation-link'> Lokalnym <span> zbiórkom </span></NavLink>
                         </li>
                     </ul>
                     <p className='organisation-description'> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut
                         laboreet dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. </p>
                 </div>
-                <div className='organisations'>
-                    {/*<Switch>*/}
-                    {/*    <Route  path='/' component={() => <Fundations />} />*/}
-                    {/*    <Route  path='/' component={() => <NonGovOrganisations />} />*/}
-                    {/*    <Route  path='/' component={() => <LocalOrganisations/>} />*/}
-                    {/*</Switch>*/}
+                <HashRouter>
 
-                    {/*<Fundations />*/}
+                    <div className='organisations'>
+                        <Switch>
+                            <Route path='/fundations'> <Fundations/> </Route>
+                            <Route path='/organisations'> <NonGovOrganisations/> </Route>
+                            <Route path='/local_organisations'> <LocalOrganisations/> </Route>
+                        </Switch>
 
-                    {/*<NonGovOrganisations/>*/}
-                    {/*<LocalOrganisations/>*/}
-                </div>
+                        {/*<Fundations />*/}
+                        {/*<NonGovOrganisations/>*/}
+                        {/*<LocalOrganisations/>*/}
+                    </div>
+                </HashRouter>
+
             </section>
         )
     }
