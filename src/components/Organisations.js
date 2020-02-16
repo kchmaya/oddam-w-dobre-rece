@@ -142,12 +142,7 @@ const LocalOrganisations = () => {
 
 
 class Organisations extends Component {
-
-
-
     render() {
-
-
         return (
             <section className='organisation-section' id='organisation'>
                 <div className='organisation-header'>
