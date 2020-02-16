@@ -1,0 +1,60 @@
+@import 'settings/fonts';
+@import 'settings/colors';
+
+.organisation-section {
+  color: $color-dark-brown;
+  margin: 4rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .organisation-header {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .organisation-title {
+      font-size: 2.1rem;
+      font-weight: 400;
+
+      margin-bottom: 1.5rem;
+    }
+
+    .organisation-decoration {
+      margin-bottom: 1rem;
+    }
+
+    .organisation-choice {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-size: 1.5rem;
+      padding: 0.25rem;
+      text-align: center;
+      text-decoration: none;
+
+
+      li {
+        margin: 1rem 3rem;
+
+        .organisation-link {
+          text-decoration: none;
+
+          span {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .organisation-description {
+      width: 80%;
+      font-size: 1.35rem;
+      margin-top: 2.5rem;
+      text-align: center;
+    }
+  }
+}
