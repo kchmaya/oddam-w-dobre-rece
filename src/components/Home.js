@@ -7,12 +7,14 @@ import About from './About';
 import Organisations from './Organisations';
 import Contact from './Contact';
 import Footer from './Footer';
+// import Login from "./UserLog/Login";
 
 
 class Home extends Component {
     render() {
         return (
             <>
+                {/*<Login />*/}
                 <Header />
                 <MainSection />
                 <ThreeColumns />

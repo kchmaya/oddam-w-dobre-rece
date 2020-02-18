@@ -1,0 +1,133 @@
+@import "settings/colors";
+@import "settings/fonts";
+
+//.header-login {
+//  display: flex;
+//  flex-direction: column;
+//  margin: 2.5rem 9rem;
+//
+//  font-size: 0.875rem;
+//
+//  ul {
+//    display: flex;
+//    justify-content: flex-end;
+//
+//    li {
+//      padding: 0.5rem;
+//
+//      &:last-of-type {
+//        border: 1px solid $color-yellow;
+//        margin-left: 0.625rem;
+//      }
+//
+//      .header-login-nav {
+//        color: $color-grey;
+//      }
+//    }
+//  }
+//}
+
+.login-modal {
+  height: 100vh;
+  //width: 100vw;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .login-modal-box {
+    //width: 60rem;
+    //height: 45rem;
+    //background: white;
+    //box-shadow: 0 3px 10px rgba($color-grey, 0.15);
+
+    //.login-modal-close {
+    //  text-align: end;
+    //  margin: 3rem;
+    //
+    //  cursor: pointer;
+    //  color: $color-grey;
+    //}
+
+    .login-form-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .login-modal-title {
+        font-size: 2.5rem;
+        font-weight: 400;
+        color: $color-dark-brown;
+        margin-bottom: 1rem;
+      }
+
+      .login-modal-form {
+        margin-top: 2rem;
+
+        .login-form-inputs {
+          color: $color-dark-brown;
+          background-color: $color-light-grey;
+          padding: 3rem 4rem 2rem;
+
+          display: flex;
+          flex-direction: column;
+
+          label {
+            display: flex;
+            flex-direction: column;
+            width: 20rem;
+            font-weight: 600;
+
+            input {
+              background: none;
+              border: none;
+              border-bottom: 1px solid $color-grey;
+              margin-top: 0.5rem;
+              padding-top: 0.5rem;
+
+              font-size: 1.2rem;
+              outline: none;
+            }
+          }
+
+          .error-message {
+            margin-bottom: 2rem;
+          }
+        }
+      }
+
+      .login-form-btns {
+        width: 33rem;
+        display: flex;
+        justify-content: space-between;
+
+        .login-form-link {
+          margin-top: 2rem;
+          padding: 13px;
+
+          font-size: 1rem;
+          font-weight: 300;
+          font-family: $font-base;
+          text-decoration: none;
+          list-style: none;
+          color: $color-dark-brown;
+        }
+
+        .login-form-btn {
+          background: none;
+          cursor: pointer;
+          outline: none;
+          margin-top: 2rem;
+          padding: 13px;
+
+          font-size: 1rem;
+          font-weight: 300;
+          font-family: $font-base;
+
+          border: 1px solid $color-grey;
+        }
+      }
+    }
+  }
+}

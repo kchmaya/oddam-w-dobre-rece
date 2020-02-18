@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import {NavLink, HashRouter, Switch, Route} from 'react-router-dom';
-
+import {HashRouter, NavLink, Switch, Route} from "react-router-dom";
 
 const Fundations = () => {
 
@@ -127,7 +126,6 @@ const LocalOrganisations = () => {
             description: "  Donec nec massa eu arcu dapibus placerat aliquet id lacus. Vestibulum nec pretium ante.",
             additional: "Vestibulum vel leo lacus."
         },
-
     ];
     return (
         localOrganisationsInfo.map((data, index) => {
@@ -140,8 +138,18 @@ const LocalOrganisations = () => {
     )
 };
 
-
 class Organisations extends Component {
+    state = {
+        showContent: false
+    };
+
+    handleClick = () => {
+        this.setState({
+            showContent: true
+        });
+        console.log('show')
+    };
+
     render() {
         return (
             <section className='organisation-section' id='organisation'>
@@ -149,38 +157,91 @@ class Organisations extends Component {
                     <h2 className='organisation-title'> Komu pomagamy? </h2>
                     <img src={require('../assets/Decoration.svg')} alt='' className='organisation-decoration'/>
                     <ul className='organisation-choice'>
-                        <li>
-                            <NavLink to='/fundations' className='organisation-link'> Fundacjom </NavLink>
+                        <li className='organisation-link'> Fundacjom
+                            <NavLink to='/fundations' className={this.state.showContent ? 'active-content' : ''}
+                                     activeClassName={'active-content'}/>
                         </li>
-                        <li>
-                            <NavLink to='/organisations' className='organisation-link'> Organizacjom <span> pozarządowym </span></NavLink>
+                        <li className='organisation-link'> Organizacjom <span> pozarządowym </span>
+                            <NavLink to='/non_gov_organisations' activeClassName={'active-content'}
+                                     onClick={this.handleClick}/>
                         </li>
-                        <li>
-                            <NavLink to='/local_organisations' className='organisation-link'> Lokalnym <span> zbiórkom </span></NavLink>
+                        <li className='organisation-link'> Lokalnym <span> zbiórkom </span>
+                            <NavLink to='/local_organisations' activeClassName={'active-content'}
+                                     onClick={this.handleClick}/>
                         </li>
                     </ul>
                     <p className='organisation-description'> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut
-                        laboreet dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. </p>
+                        sed do eiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim ad minim veniam, quis
+                        nostrud exercitation. </p>
                 </div>
+
                 <HashRouter>
-
-                    <div className='organisations'>
+                    <>
                         <Switch>
-                            <Route path='/fundations'> <Fundations/> </Route>
-                            <Route path='/organisations'> <NonGovOrganisations/> </Route>
-                            <Route path='/local_organisations'> <LocalOrganisations/> </Route>
+                            <Route exact path='/' component={() =>
+                                <Fundations showContent={this.showContent}/>}/>
+                            <Route path='/fundations' component={() => <Fundations />}/>
+                            <Route path='/non_gov_organisations' component={() => <NonGovOrganisations />}/>
+                            <Route path='/local_organisations' component={() => <LocalOrganisations />}/>
                         </Switch>
-
-                        {/*<Fundations />*/}
-                        {/*<NonGovOrganisations/>*/}
-                        {/*<LocalOrganisations/>*/}
-                    </div>
+                    </>
                 </HashRouter>
-
             </section>
         )
     }
 }
 
 export default Organisations;
+
+
+// class Content extends Component {
+//     render() {
+//         let content = (
+//             <Fundations/>
+//         );
+//         if (!this.props.showContent) {
+//             content = null;
+//         }
+//         return (
+//             content
+//         )
+//     }
+// }
+//
+// class Organisations extends Component {
+//     state = {
+//         showContent: false
+//     };
+//
+//     render() {
+//         const handleClick = (e) => {
+//             e.preventDefault();
+//             this.setState({
+//                 showContent: true
+//             });
+//             console.log('showed')
+//         };
+//
+//         return (
+//             <section className='organisation-section' id='organisation'>
+//                 <div className='organisation-header'>
+//                     <h2 className='organisation-title'> Komu pomagamy? </h2>
+//                     <img src={require('../assets/Decoration.svg')} alt='' className='organisation-decoration'/>
+//                     <ul className='organisation-choice'>
+//                         <li onClick={handleClick}> Fundacjom</li>
+//                         <li onClick={handleClick}
+//                             className='organisation-link'> Organizacjom <span> pozarządowym </span></li>
+//                         <li onClick={handleClick}
+//                             className='organisation-link'> Lokalnym <span> zbiórkom </span></li>
+//                     </ul>
+//                     <p className='organisation-description'> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+//                         sed do eiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim ad minim veniam, quis
+//                         nostrud exercitation. </p>
+//                 </div>
+//                 <Content showContent={this.state.showContent}/>
+//             </section>
+//         )
+//     }
+// }
+//
+// export default Organisations;
