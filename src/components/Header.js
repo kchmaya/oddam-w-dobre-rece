@@ -28,17 +28,17 @@ class Header extends Component {
                             </Link>
                         </li>
                         <li>
-                            <Link activeClass='active' to='steps' spy={true} smooth={true} offset={50} duration={500}>
+                            <Link activeClass='active' to='steps' spy={true} smooth={true} offset={-370} duration={500}>
                                 O co chodzi?
                             </Link>
                         </li>
                         <li>
-                            <Link activeClass='active' to='about' spy={true} smooth={true} offset={50} duration={500}>
+                            <Link activeClass='active' to='about' spy={true} smooth={true} offset={0} duration={500}>
                                 O nas
                             </Link>
                         </li>
                         <li>
-                            <Link activeClass='organisation' to='about' spy={true} smooth={true} offset={50} duration={500}>
+                            <Link activeClass='organisation' to='organisations' spy={true} smooth={true} offset={0} duration={500}>
                                 Fundacja i organizacje
                             </Link>
                         </li>

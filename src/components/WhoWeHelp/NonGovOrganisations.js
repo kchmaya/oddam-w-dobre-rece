@@ -1,6 +1,6 @@
-import React, {useState} from "react";
-import Pagination from "./Pagination";
-import NonGovOrgContent from "./Content/NonGovOrgContent";
+import React, {useState} from 'react';
+import Pagination from './Pagination';
+import Content from './Content';
 
 const NonGovOrganisations = () => {
 
@@ -38,19 +38,19 @@ const NonGovOrganisations = () => {
     ];
 
     const [currentPage, setCurrentPage] = useState(1);
-    const [postsPerPage] = useState(3);
+    const [itemsPerPage] = useState(3);
 
-    const indexOfLastPost = currentPage * postsPerPage;
-    const indexOfFirstPost = indexOfLastPost - postsPerPage;
-    const currentPosts = organisationsInfo.slice(indexOfFirstPost, indexOfLastPost);
+    const indexOfLastItem = currentPage * itemsPerPage;
+    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+    const currentItems = organisationsInfo.slice(indexOfFirstItem, indexOfLastItem);
 
     const paginate = pageNumber => setCurrentPage(pageNumber);
 
     return (
         <div>
-            <NonGovOrgContent currentPosts={currentPosts}/>
-            <Pagination postsPerPage={postsPerPage}
-                        totalPosts={organisationsInfo.length}
+            <Content currentItems={currentItems}/>
+            <Pagination itemsPerPage={itemsPerPage}
+                        totalItems={organisationsInfo.length}
                         paginate={paginate}/>
         </div>
     )

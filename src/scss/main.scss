@@ -9,9 +9,11 @@
 @import 'Contact';
 @import 'Footer';
 @import 'Organisations';
+  @import 'Pagination';
+  @import 'Content';
 
-@import "Login";
-@import "Register";
+@import 'Login';
+@import 'Register';
 
 * {
   margin: 0;
@@ -23,7 +25,7 @@ body {
   font-family: $font-base;
   font-size: 16px;
   height: 100%;
-  //max-width: 1920px;
+  max-width: 1920px;
 }
 
 ul {

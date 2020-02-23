@@ -35,7 +35,7 @@ class Organisations extends Component {
 
     content = () => {
         if (this.state.showContent === 'fundations') {
-            return <Fundations/>
+            return <Fundations />
         } else if (this.state.showContent === 'non-gov-organisation') {
             return <NonGovOrganisations/>
         } else if (this.state.showContent === 'local-organisations') {
@@ -46,20 +46,20 @@ class Organisations extends Component {
     render() {
 
         return (
-            <section className='organisation-section' id='organisation'>
+            <section className='organisation-section' id='organisations'>
                 <div className='organisation-header'>
                     <h2 className='organisation-title'> Komu pomagamy? </h2>
                     <img src={require('../../assets/Decoration.svg')} alt='' className='organisation-decoration'/>
                     <nav className='organisation-choice'>
                         <li onClick={this.handleClick} className='fundations active-content'> Fundacjom </li>
-                        <li onClick={this.handleClick} className='non-gov-organisations'> Organizacjom pozarządowym </li>
-                        <li onClick={this.handleClick} className='local-organisations'> Lokalnym zbiórkom </li>
+                        <li onClick={this.handleClick} className='non-gov-organisations'> Organizacjom <br/> pozarządowym </li>
+                        <li onClick={this.handleClick} className='local-organisations'> Lokalnym <br/> zbiórkom </li>
                     </nav>
                     <p className='organisation-description'> Lorem ipsum dolor sit amet, consectetur adipiscing
                         elit, sed do eiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim ad minim
                         veniam, quis nostrud exercitation. </p>
                 </div>
-                <div> {this.content(this.state)} </div>
+                <div className='organisation-items'> {this.content(this.state)} </div>
             </section>
         )
     }

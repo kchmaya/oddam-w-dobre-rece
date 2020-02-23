@@ -2,12 +2,15 @@
 @import 'settings/colors';
 
 .organisation-section {
+  height: 100vh;
+  width: 100%;
   color: $color-dark-brown;
-  margin: 4rem;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-content: center;
+  justify-content: center;
 
   .organisation-header {
     width: 45%;
@@ -26,8 +29,9 @@
     }
 
     .organisation-choice {
+      width: 100%;
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
 
       font-size: 1.5rem;
@@ -35,23 +39,31 @@
       text-align: center;
       text-decoration: none;
       list-style: none;
+      margin-top: 1rem;
 
       li {
-        margin: 1rem 3rem;
         text-decoration: none;
         cursor: pointer;
       }
 
       .active-content {
-        //border: 1px solid $color-grey;
+        font-weight: 600;
       }
     }
 
     .organisation-description {
       width: 80%;
       font-size: 1.35rem;
-      margin-top: 2.5rem;
+      margin-top: 3rem;
       text-align: center;
     }
+  }
+
+  .organisation-items {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 3rem;
   }
 }
