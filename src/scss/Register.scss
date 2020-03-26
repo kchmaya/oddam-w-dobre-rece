@@ -1,103 +1,95 @@
 @import "settings/colors";
 @import "settings/fonts";
 
-.register-box {
-  //width: 60rem;
-  //height: 45rem;
-  //background: white;
-  //box-shadow: 0 3px 10px rgba($color-grey, 0.15);
-
-  //.register-close {
-  //  text-align: end;
-  //  margin: 3rem;
-  //
-  //  cursor: pointer;
-  //  color: $color-grey;
-  //}
-
+.register-section {
   height: 100vh;
-  outline: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-  .register-form-box {
+  .register-box {
+    height: 75%;
+    outline: none;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    .register-title {
-      font-size: 2.5rem;
-      font-weight: 400;
-      color: $color-dark-brown;
-      margin-bottom: 1rem;
-    }
+    .register-form-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
-    .register-form {
-      margin-top: 2rem;
-
-      .register-inputs {
+      .register-title {
+        font-size: 2.5rem;
+        font-weight: 400;
         color: $color-dark-brown;
-        background-color: $color-light-grey;
-        padding: 3rem 4rem 2rem;
+        margin-bottom: 1rem;
+      }
 
-        display: flex;
-        flex-direction: column;
+      .register-form {
+        margin-top: 2rem;
 
-        label {
+        .register-inputs {
+          color: $color-dark-brown;
+          background-color: $color-light-grey;
+          padding: 3rem 4rem 2rem;
+
           display: flex;
           flex-direction: column;
-          width: 20rem;
-          font-weight: 600;
 
-          input {
-            background: none;
-            border: none;
-            border-bottom: 1px solid $color-grey;
+          label {
+            display: flex;
+            flex-direction: column;
+            width: 20rem;
+            font-weight: 600;
 
-            margin-top: 0.5rem;
-            padding-top: 0.5rem;
+            input {
+              background: none;
+              border: none;
+              border-bottom: 1px solid $color-grey;
 
-            font-size: 1.2rem;
-            outline: none;
+              margin-top: 0.5rem;
+              padding-top: 0.5rem;
+
+              font-size: 1.2rem;
+              outline: none;
+            }
+          }
+
+          .error-message {
+            margin-bottom: 2rem;
           }
         }
-        .error-message {
-          margin-bottom: 2rem;
+      }
+
+      .register-form-btns {
+        width: 33rem;
+        display: flex;
+        justify-content: space-between;
+
+        .register-form-link {
+          margin-top: 2rem;
+          padding: 13px;
+
+          font-size: 1rem;
+          font-weight: 300;
+          font-family: $font-base;
+          text-decoration: none;
+          list-style: none;
+          color: $color-dark-brown;
         }
-      }
-    }
 
-    .register-form-btns {
-      width: 33rem;
-      display: flex;
-      justify-content: space-between;
+        .register-form-btn {
+          background: none;
+          cursor: pointer;
+          outline: none;
+          margin-top: 2rem;
+          padding: 13px;
 
-      .register-form-link {
-        margin-top: 2rem;
-        padding: 13px;
+          font-size: 1rem;
+          font-weight: 300;
+          font-family: $font-base;
 
-        font-size: 1rem;
-        font-weight: 300;
-        font-family: $font-base;
-        text-decoration: none;
-        list-style: none;
-        color: $color-dark-brown;
-      }
-
-      .register-form-btn {
-        background: none;
-        cursor: pointer;
-        outline: none;
-        margin-top: 2rem;
-        padding: 13px;
-
-        font-size: 1rem;
-        font-weight: 300;
-        font-family: $font-base;
-
-        border: 1px solid $color-grey;
+          border: 1px solid $color-grey;
+        }
       }
     }
   }

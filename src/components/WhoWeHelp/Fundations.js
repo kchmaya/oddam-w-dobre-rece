@@ -66,6 +66,7 @@ const Fundations = () => {
             <Content currentItems={currentItems}/>
             <Pagination itemsPerPage={itemsPerPage}
                         totalItems={fundationsInfo.length}
+                        currentPage={currentPage}
                         paginate={paginate}/>
         </>
     )

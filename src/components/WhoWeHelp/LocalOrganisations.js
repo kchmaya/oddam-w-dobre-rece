@@ -36,6 +36,7 @@ const LocalOrganisations = () => {
             <Content currentItems={currentItems}/>
             <Pagination itemsPerPage={itemsPerPage}
                         totalItems={localOrganisationsInfo.length}
+                        currentPage={currentPage}
                         paginate={paginate}/>
         </div>
     )

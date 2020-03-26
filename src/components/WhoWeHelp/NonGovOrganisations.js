@@ -51,6 +51,7 @@ const NonGovOrganisations = () => {
             <Content currentItems={currentItems}/>
             <Pagination itemsPerPage={itemsPerPage}
                         totalItems={organisationsInfo.length}
+                        currentPage={currentPage}
                         paginate={paginate}/>
         </div>
     )

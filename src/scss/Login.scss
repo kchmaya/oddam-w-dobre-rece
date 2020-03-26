@@ -1,53 +1,15 @@
 @import "settings/colors";
 @import "settings/fonts";
 
-//.header-login {
-//  display: flex;
-//  flex-direction: column;
-//  margin: 2.5rem 9rem;
-//
-//  font-size: 0.875rem;
-//
-//  ul {
-//    display: flex;
-//    justify-content: flex-end;
-//
-//    li {
-//      padding: 0.5rem;
-//
-//      &:last-of-type {
-//        border: 1px solid $color-yellow;
-//        margin-left: 0.625rem;
-//      }
-//
-//      .header-login-nav {
-//        color: $color-grey;
-//      }
-//    }
-//  }
-//}
-
-.login-modal {
+.login-section {
   height: 100vh;
-  //width: 100vw;
-  outline: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-  .login-modal-box {
-    //width: 60rem;
-    //height: 45rem;
-    //background: white;
-    //box-shadow: 0 3px 10px rgba($color-grey, 0.15);
-
-    //.login-modal-close {
-    //  text-align: end;
-    //  margin: 3rem;
-    //
-    //  cursor: pointer;
-    //  color: $color-grey;
-    //}
+  .login-box {
+    height: 75%;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     .login-form-box {
       display: flex;
@@ -55,14 +17,14 @@
       justify-content: center;
       align-items: center;
 
-      .login-modal-title {
+      .login-title {
         font-size: 2.5rem;
         font-weight: 400;
         color: $color-dark-brown;
         margin-bottom: 1rem;
       }
 
-      .login-modal-form {
+      .login-form {
         margin-top: 2rem;
 
         .login-form-inputs {
