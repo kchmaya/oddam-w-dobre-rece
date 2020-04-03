@@ -61,7 +61,6 @@ class Login extends Component {
     render() {
         return (
             <section className='login-section'>
-                <Header/>
                 <div className='login-box'>
                     <div className='login-form-box'>
                         <h2 className='login-title'> Zaloguj się </h2>

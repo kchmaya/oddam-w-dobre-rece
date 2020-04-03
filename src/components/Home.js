@@ -8,12 +8,10 @@ import Organisations from './WhoWeHelp/Organisations';
 import Contact from './Contact';
 import Footer from './Footer';
 
-
 class Home extends Component {
     render() {
         return (
             <>
-                <Header />
                 <MainSection />
                 <ThreeColumns />
                 <Steps />

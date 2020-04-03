@@ -23,9 +23,9 @@ class Header extends Component {
                 <div className='header-menu'>
                     <ul>
                         <li>
-                            <Link to='/'>
+                            <NavLink className='start-btn' to='/'>
                                 Start
-                            </Link>
+                            </NavLink>
                         </li>
                         <li>
                             <Link activeClass='active' to='steps' spy={true} smooth={true} offset={-370} duration={500}>

@@ -37,6 +37,11 @@
       justify-content: flex-end;
       margin-top: 0.5rem;
 
+      .start-btn {
+        text-decoration: none;
+        color: inherit;
+      }
+
       li {
         margin: 0 0.5rem;
         padding: 0.5rem 1.125rem;

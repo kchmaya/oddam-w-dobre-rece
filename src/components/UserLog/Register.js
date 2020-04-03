@@ -74,7 +74,6 @@ class Register extends Component {
     render() {
         return (
             <section className='register-section'>
-                <Header/>
                 <div className='register-box'>
                     <div className='register-form-box'>
                         <h2 className='register-title'> Załóż konto </h2>
