@@ -45,3 +45,9 @@ yarn-error.log*
 .idea/**/gradle.xml
 .idea/**/libraries
 
+# Misc
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
