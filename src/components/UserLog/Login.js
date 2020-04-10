@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {NavLink} from 'react-router-dom';
-import Header from "../Header";
+import Firebase from "../../firebase/firebase";
 
 class Login extends Component {
     state = {
@@ -21,7 +21,7 @@ class Login extends Component {
         });
     };
 
-    handleClick = event => {
+    handleSubmit = event => {
         event.preventDefault();
 
         this.setState({
@@ -48,12 +48,14 @@ class Login extends Component {
             }));
         }
         if (emailOk && passwordOk) {
-            console.log("email:", emailOk);
-            console.log("password:", passwordOk);
-            return true;
+            Firebase.auth().signInWithEmailAndPassword(email, password)
+                .then((u) => {
+                    console.log('successfully logged in');
+                })
+                .catch((error) => {
+                    console.log('error: ' + error.toString());
+                })
         } else {
-            console.log("email:", emailOk);
-            console.log("password:", passwordOk);
             return false;
         }
     };
@@ -66,7 +68,7 @@ class Login extends Component {
                         <h2 className='login-title'> Zaloguj się </h2>
                         <img src={require('../../assets/Decoration.svg')} alt=''
                              className='login-decoration'/>
-                        <form className='login-form'>
+                        <form className='login-form' onSubmit={this.handleSubmit}>
                             <div className='login-form-inputs'>
                                 <label> Email
                                     <input type="text"
@@ -86,7 +88,7 @@ class Login extends Component {
                         </form>
                         <div className='login-form-btns'>
                             <NavLink to='/register' className='login-form-link'> Załóż konto </NavLink>
-                            <button className='login-form-btn' onClick={this.handleClick}> Zaloguj się</button>
+                            <button className='login-form-btn' onClick={this.handleSubmit}> Zaloguj się</button>
                         </div>
                     </div>
                 </div>

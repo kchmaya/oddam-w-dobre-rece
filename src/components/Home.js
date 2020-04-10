@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Header from './Header';
 import MainSection from './MainSection';
 import ThreeColumns from './ThreeColumns';
 import Steps from './Steps';

@@ -9,6 +9,7 @@ class Header extends Component {
                 <div className='header-login'>
                     <ul>
                         <li>
+                            {}
                             <NavLink className='header-login-nav' to='/login'>
                                 Zaloguj
                             </NavLink>

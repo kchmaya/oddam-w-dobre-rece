@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import {NavLink} from "react-router-dom";
+import Firebase from "../../firebase/firebase";
 
 class Register extends Component {
     state = {
@@ -22,7 +23,7 @@ class Register extends Component {
         });
     };
 
-    handleClick = event => {
+    handleSubmit = event => {
         event.preventDefault();
 
         this.setState({
@@ -58,14 +59,14 @@ class Register extends Component {
             }));
         }
         if (emailOk && passwordOk && passwordRepeatOk) {
-            console.log("email:", emailOk);
-            console.log("password:", passwordOk);
-            console.log("PasswordRepeat:", passwordRepeatOk);
-            return true;
+            Firebase.auth().createUserWithEmailAndPassword(email, password)
+                .then((u) => {
+                    console.log('successfully signed up');
+                })
+                .catch((error) => {
+                    console.log('error:' + error.toString());
+                })
         } else {
-            console.log("email:", emailOk);
-            console.log("password:", passwordOk);
-            console.log("PasswordRepeat:", passwordRepeatOk);
             return false;
         }
     };
@@ -78,7 +79,7 @@ class Register extends Component {
                         <h2 className='register-title'> Załóż konto </h2>
                         <img src={require('../../assets/Decoration.svg')} alt=''
                              className='register-decoration'/>
-                        <form className='register-form'>
+                        <form className='register-form' onSubmit={this.handleSubmit}>
                             <div className='register-inputs'>
                                 <label>Email
                                     <input type="text"
@@ -105,7 +106,9 @@ class Register extends Component {
                         </form>
                         <div className='register-form-btns'>
                             <NavLink to='/login' className='register-form-link'>Zaloguj się</NavLink>
-                            <button className='register-form-btn' type='submit' onClick={this.handleClick}>Załóż konto</button>
+                            <button className='register-form-btn' type='submit' onClick={this.handleSubmit}>
+                                Załóż konto
+                            </button>
                         </div>
                     </div>
                 </div>
