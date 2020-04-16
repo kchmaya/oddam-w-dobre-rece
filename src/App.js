@@ -5,6 +5,8 @@ import Login from './components/UserLog/Login';
 import Register from './components/UserLog/Register';
 import Logout from './components/UserLog/Logout';
 import Header from "./components/Header";
+import HeaderNav from "./components/HeaderNav";
+import HeaderLog from "./components/HeaderLog"
 import Firebase from "./firebase/firebase";
 
 class App extends Component {
@@ -12,6 +14,7 @@ class App extends Component {
         super(props);
         this.state = {
             user: null,
+            email: ''
         }
         this.authListener = this.authListener.bind(this);
     }
@@ -23,7 +26,10 @@ class App extends Component {
     authListener() {
         Firebase.auth().onAuthStateChanged((user) => {
             if (user) {
-                this.setState({user});
+                this.setState({
+                    user: user,
+                    email: user.email
+                });
             } else {
                 this.setState({user: null});
             }
@@ -34,7 +40,8 @@ class App extends Component {
         return (
             <HashRouter>
                 <header>
-                    <Header/>
+                    {(this.state.user) ? <HeaderLog email={this.state.email}/> : <Header/> }
+                    <HeaderNav/>
                 </header>
                 <Switch>
                     <Route exact path="/" component={Home}/>
@@ -45,8 +52,6 @@ class App extends Component {
             </HashRouter>
         );
     }
-
-
 }
 
 export default App;

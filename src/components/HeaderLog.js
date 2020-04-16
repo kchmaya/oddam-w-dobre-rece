@@ -1,20 +1,21 @@
 import React, {Component} from 'react';
 import {NavLink} from 'react-router-dom';
 
-class Header extends Component {
+class HeaderLog extends Component {
     render() {
         return (
             <section className='header'>
                 <div className='header-login'>
                     <ul>
+                        <li> Cześć, {this.props.email} </li>
                         <li>
                             <NavLink className='header-login-nav' to='/login'>
-                                Zaloguj
+                                Oddaj rzeczy
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink className='header-login-nav' to='/register'>
-                                Załóż konto
+                            <NavLink className='header-login-nav' to='/logout'>
+                                Wyloguj
                             </NavLink>
                         </li>
                     </ul>
@@ -24,4 +25,4 @@ class Header extends Component {
     }
 }
 
-export default Header;
+export default HeaderLog;

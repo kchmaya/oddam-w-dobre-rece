@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 
 class MainSection extends Component {
+    user = this.props;
     render() {
         return (
             <section className='main-section'>
