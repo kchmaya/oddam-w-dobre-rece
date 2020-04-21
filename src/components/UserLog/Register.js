@@ -106,9 +106,9 @@ class Register extends Component {
                         </form>
                         <div className='register-form-btns'>
                             <NavLink to='/login' className='register-form-link'>Zaloguj się</NavLink>
-                            <button className='register-form-btn' type='submit' onClick={this.handleSubmit}>
+                            <NavLink to='/' className='register-form-btn' type='submit' onClick={this.handleSubmit}>
                                 Załóż konto
-                            </button>
+                            </NavLink>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,78 @@
+@import "../settings/colors";
+
+.give-things-section {
+  display: flex;
+
+  .give-things-img {
+    display: block;
+    margin-top: -10%;
+    z-index: -1;
+    max-width: 73%;
+  }
+
+  .give-things-main {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5rem;
+    width: 100%;
+
+
+    .give-things-title {
+      font-size: 2.3rem;
+      font-weight: 500;
+      line-height: 3.3rem;
+      color: $color-dark-brown;
+      text-align: center;
+    }
+
+    .decoration {
+      margin: 1rem;
+    }
+
+    .give-things-text {
+      font-size: 2.5rem;
+      font-weight: 300;
+      color: $color-dark-brown;
+      text-align: center;
+    }
+
+    .give-things-boxes {
+      display: flex;
+      font-weight: 300;
+      padding: 2.5rem;
+
+      .give-things-box {
+        width: 8rem;
+        height: 8rem;
+        border: 1px solid $color-dark-brown;
+        transform: rotate(45deg);
+        margin: 0.7rem;
+        display: flex;
+        align-items: center;
+
+        .box-content {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          transform: rotate(-45deg);
+          margin-left: 1.2rem;
+          margin-top: -0.3rem;
+
+          .box-number {
+            font-size: 2rem;
+            margin-top: -1.5rem;
+            margin-bottom: 0.3rem;
+          }
+
+          .box-text {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+}

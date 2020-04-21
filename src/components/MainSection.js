@@ -14,7 +14,7 @@ class MainSection extends Component {
                     <img src={require ('../assets/Decoration.svg')} alt='' className='decoration'/>
                     <ul className='main-section-btns'>
                         <li>
-                            <Link to='/login' className='btn-link'> Oddaj <span>rzeczy</span> </Link>
+                            <Link to='/give_things' className='btn-link'> Oddaj <span>rzeczy</span> </Link>
                         </li>
                         <li>
                             <Link to='/login' className='btn-link'> Zorganizuj <span>zbiórkę</span> </Link>

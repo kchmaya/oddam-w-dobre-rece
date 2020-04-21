@@ -17,6 +17,10 @@
 @import 'Register';
 @import 'Logout';
 
+@import 'GiveThingsForm/FormMain';
+  @import 'GiveThingsForm/FormSteps/FormSteps';
+    @import 'GiveThingsForm/FormSteps/StepOne';
+
 * {
   margin: 0;
   padding: 0;

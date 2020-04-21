@@ -88,7 +88,7 @@ class Login extends Component {
                         </form>
                         <div className='login-form-btns'>
                             <NavLink to='/register' className='login-form-link'> Załóż konto </NavLink>
-                            <button className='login-form-btn' onClick={this.handleSubmit}> Zaloguj się</button>
+                            <NavLink className='login-form-btn' to='/' onClick={this.handleSubmit}> Zaloguj się</NavLink>
                         </div>
                     </div>
                 </div>

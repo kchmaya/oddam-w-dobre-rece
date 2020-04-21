@@ -1,0 +1,37 @@
+@import '../../settings/colors';
+@import '../../settings/fonts';
+
+.form-steps-section {
+  height: 85vh;
+  position: relative;
+  background-image: url('../../../assets/Background-Form.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .step-btns {
+    margin-left: 7rem;
+    position: absolute;
+    margin-bottom: 2rem;
+
+    .step-btn {
+      background: none;
+      cursor: pointer;
+      outline: none;
+      margin: 5rem 0 3rem 0;
+      width: 9rem;
+      height: 4rem;
+      border: 1px solid $color-grey;
+
+      font-size: 23px;
+      font-weight: 300;
+      font-family: $font-base;
+      text-decoration: none;
+      list-style: none;
+      color: $color-dark-brown;
+    }
+
+    .prev-btn {
+      margin-right: 3rem;
+    }
+  }
+}

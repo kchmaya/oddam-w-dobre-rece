@@ -1,13 +1,14 @@
 import React, {Component} from 'react';
 import {HashRouter, Route, Switch} from 'react-router-dom';
+import Firebase from "./firebase/firebase";
 import Home from './components/Home';
 import Login from './components/UserLog/Login';
 import Register from './components/UserLog/Register';
 import Logout from './components/UserLog/Logout';
-import Header from "./components/Header";
-import HeaderNav from "./components/HeaderNav";
-import HeaderLog from "./components/HeaderLog"
-import Firebase from "./firebase/firebase";
+import Header from './components/Header';
+import HeaderNav from './components/HeaderNav';
+import HeaderLog from './components/HeaderLog'
+import GiveThings from './components/GiveThingsForm/GiveThings';
 
 class App extends Component {
     constructor(props) {
@@ -44,10 +45,11 @@ class App extends Component {
                     <HeaderNav/>
                 </header>
                 <Switch>
-                    <Route exact path="/" component={Home}/>
-                    <Route exact path="/login" component={Login}/>
-                    <Route exact path="/register" component={Register}/>
-                    <Route exact path="/logout" component={Logout}/>
+                    <Route exact path='/' component={Home}/>
+                    <Route exact path='/login' component={Login}/>
+                    <Route exact path='/register' component={Register}/>
+                    <Route exact path='/logout' component={Logout}/>
+                    <Route exact path='/give_things' component={GiveThings}/>
                 </Switch>
             </HashRouter>
         );
