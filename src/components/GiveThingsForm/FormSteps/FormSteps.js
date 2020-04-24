@@ -3,6 +3,8 @@ import StepOne from "./StepOne";
 import StepTwo from "./StepTwo";
 import StepThree from './StepThree'
 import StepFour from './StepFour'
+import StepFive from "./StepFive";
+import StepSix from "./StepSix";
 
 
 class FormSteps extends Component {
@@ -12,7 +14,9 @@ class FormSteps extends Component {
                 {/*<StepOne/>*/}
                 {/*<StepTwo/>*/}
                 {/*<StepThree/>*/}
-                <StepFour/>
+                {/*<StepFour/>*/}
+                {/*<StepFive data={this.state}/>*/}
+                <StepSix/>
                 <div className='step-btns'>
                     <button className='step-btn prev-btn'> Wstecz</button>
                     <button className='step-btn next-btn'> Dalej</button>

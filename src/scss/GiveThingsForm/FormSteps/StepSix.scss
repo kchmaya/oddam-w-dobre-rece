@@ -1,0 +1,21 @@
+.step-six-section {
+  width: 65%;
+
+  .step-six-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 18rem;
+
+    .step-six-title {
+      font-size: 38px;
+      font-weight: 300;
+    }
+
+    .step-six-decoration {
+      margin-top: 1.5rem;
+    }
+  }
+}
