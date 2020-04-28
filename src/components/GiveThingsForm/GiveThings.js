@@ -6,12 +6,20 @@ import FormPrompt from "./FormPrompt";
 import FormSteps from "./FormSteps/FormSteps";
 
 class GiveThings extends Component {
+    state = {
+        step: 1
+    };
+    stepChanger = (value) => {
+        this.setState({
+            step: this.state.step + value
+        })
+    };
     render() {
         return (
             <>
                 <FormMain/>
-                <FormPrompt/>
-                <FormSteps/>
+                <FormPrompt step={this.state.step}/>
+                <FormSteps step={this.state.step} stepChanger={this.stepChanger}/>
                 <Contact/>
                 <Footer/>
             </>

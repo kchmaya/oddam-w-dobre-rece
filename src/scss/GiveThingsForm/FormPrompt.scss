@@ -1,0 +1,21 @@
+@import '../settings/colors';
+
+.form-prompt {
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: $color-yellow;
+
+  .prompt-exclam {
+    margin-left: 7rem;
+    font-size: 34px;
+    font-weight: 600;
+  }
+
+  .prompt-info {
+    margin-left: 7rem;
+    font-size: 21px;
+    color: $color-dark-brown;
+  }
+}
