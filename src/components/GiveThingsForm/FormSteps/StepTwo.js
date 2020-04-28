@@ -6,10 +6,9 @@ class StepTwo extends Component {
             <section className='step-two-section'>
                 <p className='step-number'> Krok 2/4 </p>
                 <h1 className='step-two-title'> Podaj liczbę 60l worków, w które spakowałeś/aś rzeczy: </h1>
-                <form className='step-two-select'>
+                <form className='step-two-select' onChange={this.props.handleChange}>
                     <label className='select-text'> Liczba 60l worków: </label>
-                    <select className='nmb-of-bags' name='nmb-of-bags' id='bags-select'
-                            onChange={this.props.handleChange}>
+                    <select className='nmb-of-bags' name='nmb-of-bags' id='bags-select'>
                         <option className='option' value=''> — wybierz — </option>
                         <option className='option' value='1'> 1 </option>
                         <option className='option' value='2'> 2 </option>
