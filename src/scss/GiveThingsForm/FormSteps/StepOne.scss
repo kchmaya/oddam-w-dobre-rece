@@ -22,18 +22,24 @@
     .checkbox-text {
       font-size: 23px;
       font-weight: 300;
-      position: relative;
-      padding-left: 4.5rem;
       bottom: 30px;
-      padding-bottom: 0.7rem;
-    }
+      padding-bottom: 2.3rem;
 
-    .checkbox {
-      position: relative;
-      cursor: pointer;
-      width: 35px;
-      height: 35px;
-      padding-bottom: 1rem;
+      .checkbox {
+        position: relative;
+        cursor: pointer;
+        width: 35px;
+        height: 35px;
+        padding-bottom: 1rem;
+        appearance: none;
+        outline: none;
+      }
+
+      span {
+        position: relative;
+        bottom: 0.4rem;
+        padding-left: 1.5rem;
+      }
     }
 
     .checkbox:before {
@@ -45,7 +51,7 @@
       top: 0;
       left: 0;
       border: 1px solid $color-dark-brown;
-      background: $color-light-grey;
+      background: transparent;
     }
 
     .checkbox:checked:after {

@@ -7,22 +7,32 @@ class StepOne extends Component {
                 <p className='step-number'> Krok 1/4 </p>
                 <h1 className='step-one-title'> Zaznacz, co chcesz oddać: </h1>
                 <form className='step-one-checkbox'>
-                    <input className='checkbox' type='radio' name='type-of-things'
-                           value='ubrania, które nadają się do ponownego użycia'
-                           onChange={this.props.handleThingsChange}/>
-                    <label className='checkbox-text'> ubrania, które nadają się do ponownego użycia </label>
-                    <input className='checkbox' type='radio' name='type-of-things' value='ubrania, do wyrzucenia'
-                           onChange={this.props.handleThingsChange}/>
-                    <label className='checkbox-text'> ubrania, do wyrzucenia </label>
-                    <input className='checkbox' type='radio' name='type-of-things' value='zabawki'
-                           onChange={this.props.handleThingsChange}/>
-                    <label className='checkbox-text'> zabawki </label>
-                    <input className='checkbox' type='radio' name='type-of-things' value='książki'
-                           onChange={this.props.handleThingsChange}/>
-                    <label className='checkbox-text'> książki </label>
-                    <input className='checkbox' type='radio' name='type-of-things' value='inne'
-                           onChange={this.props.handleThingsChange}/>
-                    <label className='checkbox-text'> Inne </label>
+                    <label className='checkbox-text'>
+                        <input className='checkbox' type='radio' name='type-of-things'
+                               value='ubrania, które nadają się do ponownego użycia'
+                               onChange={this.props.handleThingsChange}/>
+                        <span> ubrania, które nadają się do ponownego użycia </span>
+                    </label>
+                    <label className='checkbox-text'>
+                        <input className='checkbox' type='radio' name='type-of-things' value='ubrania, do wyrzucenia'
+                               onChange={this.props.handleThingsChange}/>
+                        <span> ubrania, do wyrzucenia </span>
+                    </label>
+                    <label className='checkbox-text'>
+                        <input className='checkbox' type='radio' name='type-of-things' value='zabawki'
+                               onChange={this.props.handleThingsChange}/>
+                        <span> zabawki </span>
+                    </label>
+                    <label className='checkbox-text'>
+                        <input className='checkbox' type='radio' name='type-of-things' value='książki'
+                               onChange={this.props.handleThingsChange}/>
+                        <span> książki </span>
+                    </label>
+                    <label className='checkbox-text'>
+                        <input className='checkbox' type='radio' name='type-of-things' value='inne'
+                               onChange={this.props.handleThingsChange}/>
+                        <span> Inne </span>
+                    </label>
                 </form>
             </section>
         )
