@@ -4,6 +4,16 @@ class StepFive extends Component {
     render() {
         const {data} = this.props;
 
+        const bagsAmount = () => {
+            if (data.amountOfBags > 4) {
+                return <span> {data.amountOfBags + ' worek'} </span>
+            } else if (data.amountOfBags > 1 && data.amountOfBags < 5) {
+                return <span> {data.amountOfBags + ' worki'} </span>
+            } else {
+                return <span> {data.amountOfBags + ' worka'} </span>
+            }
+        }
+
         return (
             <section className='step-five-section'>
                 <h1 className='step-five-title'> Podsumowanie Twojej darowizny </h1>
@@ -12,8 +22,7 @@ class StepFive extends Component {
                     <div className='things-info'>
                         <img src={require('../../../assets/Icon-1.svg')} className='step-five-icon' alt=''/>
                         <p className='things-data'>
-                            {data.amountOfBags > 1 ? data.amountOfBags + ' worki' : data.amountOfBags + ' worek'},
-                            {data.typeOfThings}, {data.whoYouHelp + ', '} {data.additionalOrg}
+                            {bagsAmount()}, {data.typeOfThings}, {data.whoYouHelp + ', '} {data.additionalOrg}
                         </p>
                     </div>
                     <div className='things-info'>

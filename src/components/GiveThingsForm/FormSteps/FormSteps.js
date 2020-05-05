@@ -8,7 +8,7 @@ import StepSix from "./StepSix";
 
 class FormSteps extends Component {
     state = {
-        typeOfThings: null,
+        typeOfThings: '',
         amountOfBags: '',
         location: '',
         whoYouHelp: [],

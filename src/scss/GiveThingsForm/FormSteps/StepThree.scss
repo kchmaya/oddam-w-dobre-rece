@@ -21,7 +21,7 @@
 
     .city-select {
       width: 18rem;
-      height: 3rem;
+      height: 3.5rem;
       appearance: none;
       background: transparent url('../../../assets/Icon-Arrow-Down.svg') no-repeat right;
       border: 1px solid $color-grey;
@@ -84,5 +84,7 @@
   .help-option-title {
     font-size: 23px;
     font-weight: 600;
+    position: relative;
+    top: 1.5rem;
   }
 }
