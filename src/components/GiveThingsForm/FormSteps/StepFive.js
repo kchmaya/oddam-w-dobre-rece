@@ -3,15 +3,7 @@ import React, {Component} from 'react';
 class StepFive extends Component {
     render() {
         const {data} = this.props;
-        const {list} = this.props;
-        const listSorted = [];
-        for (let i = 0; i < list.length; i++) {
-            if (i < list.length - 1) {
-                listSorted.push(list[i] + ', ');
-            } else {
-                listSorted.push(list[i]);
-            }
-        }
+
         return (
             <section className='step-five-section'>
                 <h1 className='step-five-title'> Podsumowanie Twojej darowizny </h1>
@@ -20,13 +12,13 @@ class StepFive extends Component {
                     <div className='things-info'>
                         <img src={require('../../../assets/Icon-1.svg')} className='step-five-icon' alt=''/>
                         <p className='things-data'>
-                            {this.props.howManyBags > 1 ? data.howManyBags + ' worki' : data.howManyBags + ' worek'},
-                            {data.typeOfThings}, {listSorted}{data.additionalOrg.length > 1 ? ', ' + data.additionalOrg : ''}
+                            {data.amountOfBags > 1 ? data.amountOfBags + ' worki' : data.amountOfBags + ' worek'},
+                            {data.typeOfThings}, {data.whoYouHelp + ', '} {data.additionalOrg}
                         </p>
                     </div>
                     <div className='things-info'>
                         <img src={require('../../../assets/Icon-4.svg')} className='step-five-icon' alt=''/>
-                        <p className='things-data'> dla lokalizacji: {data.whatCity} </p>
+                        <p className='things-data'> dla lokalizacji: {data.location} </p>
                     </div>
                 </div>
                 <div className='location-info'>
