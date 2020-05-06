@@ -27,8 +27,7 @@ class HeaderNav extends Component {
                         </li>
                         <li>
                             <Link className='nav-btn' activeClass='active' to='organisations' spy={true} smooth={true}
-                                  offset={0}
-                                  duration={500}>
+                                  offset={0} duration={500}>
                                 Fundacja i organizacje
                             </Link>
                         </li>
@@ -41,7 +40,7 @@ class HeaderNav extends Component {
                     </ul>
                 </div>
             </section>
-        );
+        )
     }
 }
 

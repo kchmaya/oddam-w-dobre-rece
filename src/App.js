@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {HashRouter, Route, Switch} from 'react-router-dom';
-import Firebase from "./firebase/firebase";
+import Firebase from './firebase/firebase';
 import Home from './components/Home';
 import Login from './components/UserLog/Login';
 import Register from './components/UserLog/Register';
@@ -32,7 +32,9 @@ class App extends Component {
                     email: user.email
                 });
             } else {
-                this.setState({user: null});
+                this.setState({
+                    user: null
+                });
             }
         })
     }
@@ -41,7 +43,7 @@ class App extends Component {
         return (
             <HashRouter>
                 <header>
-                    {(this.state.user) ? <HeaderLog email={this.state.email}/> : <Header/> }
+                    {(this.state.user) ? <HeaderLog email={this.state.email}/> : <Header/>}
                     <HeaderNav/>
                 </header>
                 <Switch>

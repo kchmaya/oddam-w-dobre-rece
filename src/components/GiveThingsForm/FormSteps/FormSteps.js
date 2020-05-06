@@ -1,10 +1,10 @@
-import React, {Component} from "react";
-import StepOne from "./StepOne";
-import StepTwo from "./StepTwo";
+import React, {Component} from 'react';
+import StepOne from './StepOne';
+import StepTwo from './StepTwo';
 import StepThree from './StepThree'
 import StepFour from './StepFour'
-import StepFive from "./StepFive";
-import StepSix from "./StepSix";
+import StepFive from './StepFive';
+import StepSix from './StepSix';
 
 class FormSteps extends Component {
     state = {
@@ -115,7 +115,7 @@ class FormSteps extends Component {
                         </button> : null}
                     {this.props.step <= 5 ?
                         <button className='step-btn' onClick={e => this.handleBtn(e, 1)}
-                                onSubmit={this.handleNextBtn}> {this.props.step === 5 ? "Potwierdź" : "Dalej"}
+                                onSubmit={this.handleNextBtn}> {this.props.step === 5 ? 'Potwierdź' : 'Dalej'}
                         </button> : null}
                 </div>
             </section>

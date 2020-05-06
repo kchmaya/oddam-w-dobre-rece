@@ -9,12 +9,12 @@ class StepThree extends Component {
                 <form>
                     <select className='city-select' name='city-select'
                             value={this.props.location} onChange={this.props.setLocation}>
-                        <option className='option' value=''> — wybierz —</option>
-                        <option className='option' value='Poznań'> Poznań</option>
-                        <option className='option' value='Warszawa'> Warszawa</option>
-                        <option className='option' value='Kraków'> Kraków</option>
-                        <option className='option' value='Wrocław'> Wrocław</option>
-                        <option className='option' value='Katowice'> Katowice</option>
+                        <option className='option' value=''> — wybierz — </option>
+                        <option className='option' value='Poznań'> Poznań </option>
+                        <option className='option' value='Warszawa'> Warszawa </option>
+                        <option className='option' value='Kraków'> Kraków </option>
+                        <option className='option' value='Wrocław'> Wrocław </option>
+                        <option className='option' value='Katowice'> Katowice </option>
                     </select>
                     <p className='help-select-title'> Komu chcesz pomóc? </p>
                     <label className='help-select'>

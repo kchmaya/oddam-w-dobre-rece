@@ -23,7 +23,6 @@ class ThreeColumns extends Component {
                         Pellentesque vel enim a elit viverra elementuma. Aliquam erat voluptat </p>
                 </div>
             </section>
-
         )
     }
 }

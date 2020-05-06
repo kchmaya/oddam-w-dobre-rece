@@ -12,26 +12,26 @@ class GiveThingsSteps extends Component {
                     <ul className='give-things-boxes'>
                         <li className='give-things-box'>
                             <div className='box-content'>
-                                <p className='box-number'>1</p>
-                                <p className='box-text'>Wybierz <br/> rzeczy</p>
+                                <p className='box-number'> 1 </p>
+                                <p className='box-text'> Wybierz <br/> rzeczy </p>
                             </div>
                         </li>
                         <li className='give-things-box'>
                             <div className='box-content'>
-                                <p className='box-number'>2</p>
-                                <p className='box-text'>Spakuj je <br/> w worki</p>
+                                <p className='box-number'> 2 </p>
+                                <p className='box-text'> Spakuj je <br/> w worki </p>
                             </div>
                         </li>
                         <li className='give-things-box'>
                             <div className='box-content'>
-                                <p className='box-number'>3</p>
-                                <p className='box-text'>Wybierz <br/> fundację</p>
+                                <p className='box-number'> 3 </p>
+                                <p className='box-text'> Wybierz <br/> fundację </p>
                             </div>
                         </li>
                         <li className='give-things-box'>
                             <div className='box-content'>
-                                <p className='box-number'>4</p>
-                                <p className='box-text'>Zamów <br/>kuriera</p>
+                                <p className='box-number'> 4 </p>
+                                <p className='box-text'> Zamów <br/>kuriera </p>
                             </div>
                         </li>
                     </ul>

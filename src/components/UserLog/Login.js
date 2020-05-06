@@ -1,13 +1,13 @@
-import React, {Component} from "react";
+import React, {Component} from 'react';
 import {NavLink} from 'react-router-dom';
-import Firebase from "../../firebase/firebase";
+import Firebase from '../../firebase/firebase';
 
 class Login extends Component {
     state = {
-        email: "",
-        password: "",
-        errorEmail: "",
-        errorPassword: ""
+        email: '',
+        password: '',
+        errorEmail: '',
+        errorPassword: ''
     };
 
     validateEmail = email => {
@@ -25,8 +25,8 @@ class Login extends Component {
         event.preventDefault();
 
         this.setState({
-            errorEmail: "",
-            errorPassword: ""
+            errorEmail: '',
+            errorPassword: ''
         });
 
         const email = this.state.email;
@@ -38,13 +38,13 @@ class Login extends Component {
         if (!this.validateEmail(email)) {
             emailOk = false;
             this.setState(() => ({
-                errorEmail: "Podany email jest nieprawidłowy!"
+                errorEmail: 'Podany email jest nieprawidłowy!'
             }));
         }
         if (password.length < 6) {
             passwordOk = false;
             this.setState(() => ({
-                errorPassword: "Podane hasło jest za krótkie!"
+                errorPassword: 'Podane hasło jest za krótkie!'
             }));
         }
         if (emailOk && passwordOk) {
@@ -71,24 +71,26 @@ class Login extends Component {
                         <form className='login-form' onSubmit={this.handleSubmit}>
                             <div className='login-form-inputs'>
                                 <label> Email
-                                    <input type="text"
-                                           name="email"
+                                    <input type='text'
+                                           name='email'
                                            value={this.state.email}
                                            onChange={this.handleChange}/>
                                 </label>
-                                <p className='error-message' style={{color: "red"}}> {this.state.errorEmail} </p>
+                                <p className='error-message' style={{color: 'red'}}> {this.state.errorEmail} </p>
                                 <label> Hasło
-                                    <input type="password"
-                                           name="password"
+                                    <input type='password'
+                                           name='password'
                                            value={this.state.password}
                                            onChange={this.handleChange}/>
                                 </label>
-                                <p className='error-message' style={{color: "red"}}>{this.state.errorPassword}</p>
+                                <p className='error-message' style={{color: 'red'}}> {this.state.errorPassword} </p>
                             </div>
                         </form>
                         <div className='login-form-btns'>
                             <NavLink to='/register' className='login-form-link'> Załóż konto </NavLink>
-                            <NavLink className='login-form-btn' to='/' onClick={this.handleSubmit}> Zaloguj się</NavLink>
+                            <NavLink className='login-form-btn' to='/' onClick={this.handleSubmit}>
+                                Zaloguj się
+                            </NavLink>
                         </div>
                     </div>
                 </div>

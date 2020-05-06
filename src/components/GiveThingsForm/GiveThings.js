@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import Footer from "../Footer";
-import Contact from "../Contact";
-import FormMain from "./FormMain";
-import FormPrompt from "./FormPrompt";
-import FormSteps from "./FormSteps/FormSteps";
+import Footer from '../Footer';
+import Contact from '../Contact';
+import FormMain from './FormMain';
+import FormPrompt from './FormPrompt';
+import FormSteps from './FormSteps/FormSteps';
 
 class GiveThings extends Component {
     state = {

@@ -1,5 +1,5 @@
-@import "settings/colors";
-@import "settings/fonts";
+@import 'settings/colors';
+@import 'settings/fonts';
 
 .logout-section {
   height: 100vh;
@@ -28,14 +28,12 @@
       cursor: pointer;
       outline: none;
       padding: 13px;
-
       color: $color-dark-brown;
       font-size: 1rem;
       font-weight: 300;
       font-family: $font-base;
       text-decoration: none;
       list-style: none;
-
       border: 1px solid $color-grey;
     }
   }

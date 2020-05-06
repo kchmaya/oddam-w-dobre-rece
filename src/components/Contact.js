@@ -3,13 +3,13 @@ import React, {Component} from 'react';
 class Contact extends Component {
 
     state = {
-        name: "",
-        email: "",
-        message: "",
-        errorName: "",
-        errorEmail: "",
-        errorText: "",
-        successMessage: ""
+        name: '',
+        email: '',
+        message: '',
+        errorName: '',
+        errorEmail: '',
+        errorText: '',
+        successMessage: ''
     };
 
     validateEmail = email => {
@@ -18,7 +18,7 @@ class Contact extends Component {
     };
 
     validateName = name => {
-        let re =  /^[a-zA-Z]{1,200}$/;
+        let re = /^[a-zA-Z]{1,200}$/;
         return re.test(String(name).toString());
     };
 
@@ -32,10 +32,10 @@ class Contact extends Component {
         event.preventDefault();
 
         this.setState({
-            errorName: "",
-            errorEmail: "",
-            errorText: "",
-            successMessage: ""
+            errorName: '',
+            errorEmail: '',
+            errorText: '',
+            successMessage: ''
         });
 
         const data = {
@@ -44,41 +44,39 @@ class Contact extends Component {
             message: this.state.message
         };
 
-        console.log(data);
-
         let nameOk = true;
         let emailOk = true;
         let textOk = true;
 
         if (!this.validateName(data.name)) {
-            this.setState(state => ({
-                errorName: "Podane imię jest nieprawidłowe!"
-            }));
+            this.setState({
+                errorName: 'Podane imię jest nieprawidłowe!'
+            });
             nameOk = false;
         }
         if (!this.validateEmail(data.email)) {
-            this.setState(state => ({
-                errorEmail: "Podany email jest nieprawidłowy"
-            }));
+            this.setState({
+                errorEmail: 'Podany email jest nieprawidłowy'
+            });
             emailOk = false;
         }
         if (data.message.length < 120) {
-            this.setState(state => ({
-                errorText: "Pole wiadomość musi mieć conajmniej 120 znaków!"
-            }));
+            this.setState({
+                errorText: 'Pole wiadomość musi mieć conajmniej 120 znaków!'
+            });
             textOk = false;
         }
         if (nameOk && emailOk && textOk) {
             this.setState({
-                successMessage: "Wiadomość została wysłana! Wkrótce się skontaktujemy."
+                successMessage: 'Wiadomość została wysłana! Wkrótce się skontaktujemy.'
             });
 
-            const url = "https://fer-api.coderslab.pl/v1/portfolio/contact";
+            const url = 'https://fer-api.coderslab.pl/v1/portfolio/contact';
 
             return fetch(url, {
-                method: "POST",
+                method: 'POST',
                 headers: {
-                    "Content-Type": "application/json"
+                    'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(data)
             })
@@ -86,7 +84,7 @@ class Contact extends Component {
                     if (response.ok) {
                         return response.json();
                     } else {
-                        throw new Error("Blad sieci");
+                        throw new Error('Blad sieci');
                     }
                 })
                 .catch(error => {
@@ -101,18 +99,18 @@ class Contact extends Component {
                 <div className='contact-form'>
                     <h2 className='contact-title'> Skontaktuj się z nami </h2>
                     <img src={require('../assets/Decoration.svg')} alt='' className='contact-decoration'/>
-                    <p style={{color: "green"}}> {this.state.successMessage} </p>
+                    <p style={{color: 'green'}}> {this.state.successMessage} </p>
                     <form className='form' onSubmit={this.handleSubmit}>
                         <div className='form-personal'>
                             <label> Wpisz swoje imię
                                 <input type='text' name='name' value={this.state.name}
                                        placeholder='name' onChange={this.handleChange}/>
-                                <p style={{color: "red"}}> {this.state.errorName} </p>
+                                <p style={{color: 'red'}}> {this.state.errorName} </p>
                             </label>
                             <label> Wpisz swój email
                                 <input type='email' name='email' value={this.state.email}
                                        placeholder='email' onChange={this.handleChange}/>
-                                <p style={{color: "red"}}> {this.state.errorEmail} </p>
+                                <p style={{color: 'red'}}> {this.state.errorEmail} </p>
                             </label>
                         </div>
                         <label className='form-textarea'> Wpisz swoją wiadomość
@@ -122,9 +120,9 @@ class Contact extends Component {
                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'>
                              </textarea>
-                            <p style={{color: "red"}}> {this.state.errorText} </p>
+                            <p style={{color: 'red'}}> {this.state.errorText} </p>
                         </label>
-                        <button className='contact-form-btn' type="submit" value="Wyślij"> Wyślij</button>
+                        <button className='contact-form-btn' type='submit' value='Wyślij'> Wyślij</button>
                     </form>
                 </div>
             </section>

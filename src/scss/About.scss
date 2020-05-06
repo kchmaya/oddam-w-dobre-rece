@@ -1,9 +1,8 @@
-@import "settings/colors";
+@import 'settings/colors';
 
 .about-section {
   background: $color-light-grey;
   color: $color-dark-brown;
-
   display: flex;
   height: 100vh;
 

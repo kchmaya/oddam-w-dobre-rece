@@ -1,5 +1,5 @@
-import React, {Component} from "react";
-import {NavLink} from "react-router-dom";
+import React, {Component} from 'react';
+import {NavLink} from 'react-router-dom';
 
 class Logout extends Component {
     render() {
@@ -13,7 +13,7 @@ class Logout extends Component {
                 </div>
             </div>
         )
-    };
+    }
 }
 
 export default Logout;

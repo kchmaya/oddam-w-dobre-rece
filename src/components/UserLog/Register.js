@@ -1,6 +1,6 @@
-import React, {Component} from "react";
-import {NavLink} from "react-router-dom";
-import Firebase from "../../firebase/firebase";
+import React, {Component} from 'react';
+import {NavLink} from 'react-router-dom';
+import Firebase from '../../firebase/firebase';
 
 class Register extends Component {
     state = {
@@ -27,9 +27,9 @@ class Register extends Component {
         event.preventDefault();
 
         this.setState({
-            errorEmail: "",
-            errorPassword: "",
-            errorPasswordRepeat: ""
+            errorEmail: '',
+            errorPassword: '',
+            errorPasswordRepeat: ''
         });
 
         const email = this.state.email;
@@ -43,19 +43,19 @@ class Register extends Component {
         if (!this.validateEmail(email)) {
             emailOk = false;
             this.setState(() => ({
-                errorEmail: "Podany email jest nieprawidłowy!"
+                errorEmail: 'Podany email jest nieprawidłowy!'
             }));
         }
         if (password.length < 6) {
             passwordOk = false;
             this.setState(() => ({
-                errorPassword: "Podane hasło jest za krótkie!"
+                errorPassword: 'Podane hasło jest za krótkie!'
             }));
         }
         if (password !== passwordRepeat) {
             passwordRepeatOk = false;
             this.setState(() => ({
-                errorPasswordRepeat: "Podane hasła różnią się!"
+                errorPasswordRepeat: 'Podane hasła różnią się!'
             }));
         }
         if (emailOk && passwordOk && passwordRepeatOk) {
@@ -81,31 +81,31 @@ class Register extends Component {
                              className='register-decoration'/>
                         <form className='register-form' onSubmit={this.handleSubmit}>
                             <div className='register-inputs'>
-                                <label>Email
-                                    <input type="text"
-                                           name="email"
+                                <label> Email
+                                    <input type='text'
+                                           name='email'
                                            value={this.state.email}
                                            onChange={this.handleChange}/>
                                 </label>
-                                <p className='error-message' style={{color: "red"}}> {this.state.errorEmail} </p>
-                                <label>Hasło
-                                    <input type="password"
-                                           name="password"
+                                <p className='error-message' style={{color: 'red'}}> {this.state.errorEmail} </p>
+                                <label> Hasło
+                                    <input type='password'
+                                           name='password'
                                            value={this.state.password}
                                            onChange={this.handleChange}/>
                                 </label>
-                                <p className='error-message' style={{color: "red"}}>{this.state.errorPassword}</p>
+                                <p className='error-message' style={{color: 'red'}}> {this.state.errorPassword} </p>
                                 <label> Powtórz hasło
-                                    <input type="password"
-                                           name="passwordRepeat"
+                                    <input type='password'
+                                           name='passwordRepeat'
                                            value={this.state.passwordRepeat}
                                            onChange={this.handleChange}/>
                                 </label>
-                                <p className='error-message' style={{color: "red"}}>{this.state.errorPasswordRepeat}</p>
+                                <p className='error-message' style={{color: 'red'}}> {this.state.errorPasswordRepeat} </p>
                             </div>
                         </form>
                         <div className='register-form-btns'>
-                            <NavLink to='/login' className='register-form-link'>Zaloguj się</NavLink>
+                            <NavLink to='/login' className='register-form-link'> Zaloguj się </NavLink>
                             <NavLink to='/' className='register-form-btn' type='submit' onClick={this.handleSubmit}>
                                 Załóż konto
                             </NavLink>

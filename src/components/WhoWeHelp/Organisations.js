@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Fundations from './Fundations';
-import NonGovOrganisations from "./NonGovOrganisations";
-import LocalOrganisations from "./LocalOrganisations";
+import NonGovOrganisations from './NonGovOrganisations';
+import LocalOrganisations from './LocalOrganisations';
 
 class Organisations extends Component {
     state = {
@@ -50,11 +50,11 @@ class Organisations extends Component {
                     <h2 className='organisation-title'> Komu pomagamy? </h2>
                     <img src={require('../../assets/Decoration.svg')} alt='' className='organisation-decoration'/>
                     <nav className='organisation-choice'>
-                        <li onClick={this.handleClick} className='fundations active-content'> Fundacjom</li>
+                        <li onClick={this.handleClick} className='fundations active-content'> Fundacjom </li>
                         <li onClick={this.handleClick}
                             className='non-gov-organisations'> Organizacjom <br/> pozarządowym
                         </li>
-                        <li onClick={this.handleClick} className='local-organisations'> Lokalnym <br/> zbiórkom</li>
+                        <li onClick={this.handleClick} className='local-organisations'> Lokalnym <br/> zbiórkom </li>
                     </nav>
                     <p className='organisation-description'> Lorem ipsum dolor sit amet, consectetur adipiscing
                         elit, sed do eiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim ad minim
