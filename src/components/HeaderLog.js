@@ -21,7 +21,7 @@ class HeaderLog extends Component {
             <section className='header'>
                 <div className='header-login'>
                     <ul>
-                        <li> Cześć, {this.props.email} </li>
+                        <li className='user-email'> Cześć, {this.props.email} </li>
                         <li>
                             <NavLink className='header-login-nav' to='/'>
                                 Oddaj rzeczy

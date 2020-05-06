@@ -3,7 +3,7 @@
 .header {
   display: flex;
   flex-direction: column;
-  margin: 2.5rem 9rem 0 9rem;
+  margin: 2.5rem 8rem 0 9rem;
 
   .header-login {
     font-size: 0.875rem;
@@ -14,16 +14,21 @@
       justify-content: flex-end;
 
       li {
-        padding: 0.5rem;
-
-        &:last-of-type {
-          border: 1px solid $color-yellow;
-          margin-left: 0.625rem;
-        }
+        padding: 0.5rem 1rem;
+        border: 1px solid transparent;
 
         .header-login-nav {
           color: $color-grey;
+          text-decoration: none;
         }
+      }
+
+      li:hover {
+        border: 1px solid $color-yellow;
+      }
+
+      .user-email:hover {
+        border: 1px solid transparent;
       }
     }
   }

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Fundations from "./Fundations";
+import Fundations from './Fundations';
 import NonGovOrganisations from "./NonGovOrganisations";
 import LocalOrganisations from "./LocalOrganisations";
 
@@ -44,7 +44,6 @@ class Organisations extends Component {
     };
 
     render() {
-
         return (
             <section className='organisation-section' id='organisations'>
                 <div className='organisation-header'>
@@ -53,7 +52,8 @@ class Organisations extends Component {
                     <nav className='organisation-choice'>
                         <li onClick={this.handleClick} className='fundations active-content'> Fundacjom</li>
                         <li onClick={this.handleClick}
-                            className='non-gov-organisations'> Organizacjom <br/> pozarządowym </li>
+                            className='non-gov-organisations'> Organizacjom <br/> pozarządowym
+                        </li>
                         <li onClick={this.handleClick} className='local-organisations'> Lokalnym <br/> zbiórkom</li>
                     </nav>
                     <p className='organisation-description'> Lorem ipsum dolor sit amet, consectetur adipiscing

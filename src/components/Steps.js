@@ -6,7 +6,7 @@ class Steps extends Component {
         return (
             <section className='steps-section' id='steps'>
                 <h2 className='steps-title'> Wystarczą 4 proste kroki </h2>
-                <img src={require ('../assets/Decoration.svg')} alt='' className='steps-decoration'/>
+                <img src={require('../assets/Decoration.svg')} alt='' className='steps-decoration'/>
                 <div className='steps-columns'>
                     <div className='step'>
                         <img src={require('../assets/Icon-1.svg')} alt='' className='step-icon'/>
@@ -34,7 +34,7 @@ class Steps extends Component {
                     </div>
                 </div>
                 <div className='steps-btn'>
-                        <Link to='/login' className='steps-btn-link'> Oddaj <span>rzeczy</span> </Link>
+                    <Link to='/give_things' className='steps-btn-link'> Oddaj <span>rzeczy</span> </Link>
                 </div>
             </section>
         )

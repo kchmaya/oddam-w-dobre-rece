@@ -35,6 +35,7 @@
       align-items: center;
 
       font-size: 1.5rem;
+      line-height: 1.6rem;
       padding: 0.25rem;
       text-align: center;
       text-decoration: none;
@@ -44,10 +45,12 @@
       li {
         text-decoration: none;
         cursor: pointer;
+        padding: 1.5rem;
+        border: 1px solid transparent;
       }
 
       .active-content {
-        font-weight: 600;
+        border: 1px solid $color-dark-brown;
       }
     }
 

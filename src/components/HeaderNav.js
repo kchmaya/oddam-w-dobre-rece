@@ -14,23 +14,27 @@ class HeaderNav extends Component {
                             </NavLink>
                         </li>
                         <li>
-                            <Link activeClass='active' to='steps' spy={true} smooth={true} offset={-370} duration={500}>
+                            <Link className='nav-btn' activeClass='active' to='steps' spy={true} smooth={true}
+                                  offset={-370} duration={500}>
                                 O co chodzi?
                             </Link>
                         </li>
                         <li>
-                            <Link activeClass='active' to='about' spy={true} smooth={true} offset={0} duration={500}>
+                            <Link className='nav-btn' activeClass='active' to='about' spy={true} smooth={true}
+                                  offset={0} duration={500}>
                                 O nas
                             </Link>
                         </li>
                         <li>
-                            <Link activeClass='organisation' to='organisations' spy={true} smooth={true} offset={0}
+                            <Link className='nav-btn' activeClass='active' to='organisations' spy={true} smooth={true}
+                                  offset={0}
                                   duration={500}>
                                 Fundacja i organizacje
                             </Link>
                         </li>
                         <li>
-                            <Link activeClass='active' to='contact' spy={true} smooth={true} offset={50} duration={500}>
+                            <Link className='nav-btn' activeClass='active' to='contact' spy={true} smooth={true}
+                                  offset={50} duration={500}>
                                 Kontakt
                             </Link>
                         </li>
