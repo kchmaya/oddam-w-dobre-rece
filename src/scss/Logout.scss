@@ -1,0 +1,40 @@
+@import 'settings/colors';
+@import 'settings/fonts';
+
+.logout-section {
+  height: 100vh;
+
+  .logout-box {
+    height: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .logout-text {
+      font-size: 2.5rem;
+      font-weight: 400;
+      color: $color-dark-brown;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .logout-decoration {
+      margin-bottom: 1.5rem;
+    }
+
+    .logout-btn {
+      background: none;
+      cursor: pointer;
+      outline: none;
+      padding: 13px;
+      color: $color-dark-brown;
+      font-size: 1rem;
+      font-weight: 300;
+      font-family: $font-base;
+      text-decoration: none;
+      list-style: none;
+      border: 1px solid $color-grey;
+    }
+  }
+}

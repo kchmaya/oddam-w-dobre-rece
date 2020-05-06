@@ -1,5 +1,31 @@
-@import "settings/colors";
-@import "settings/fonts";
+@import 'settings/colors';
+@import 'settings/fonts';
+
+@import 'Header';
+@import 'HeaderNav';
+@import 'MainSection';
+@import 'ThreeColumns';
+@import 'Steps';
+@import 'About';
+@import 'Contact';
+@import 'Footer';
+@import 'Organisations';
+  @import 'Pagination';
+  @import 'Content';
+
+@import 'Login';
+@import 'Register';
+@import 'Logout';
+
+@import 'GiveThingsForm/FormMain';
+@import 'GiveThingsForm/FormPrompt';
+  @import 'GiveThingsForm/FormSteps/FormSteps';
+    @import 'GiveThingsForm/FormSteps/StepOne';
+    @import 'GiveThingsForm/FormSteps/StepTo';
+    @import 'GiveThingsForm/FormSteps/StepThree';
+    @import 'GiveThingsForm/FormSteps/StepFour';
+    @import 'GiveThingsForm/FormSteps/StepFive';
+    @import 'GiveThingsForm/FormSteps/StepSix';
 
 * {
   margin: 0;
@@ -10,6 +36,8 @@
 body {
   font-family: $font-base;
   font-size: 16px;
+  height: 100%;
+  max-width: 1920px;
 }
 
 ul {

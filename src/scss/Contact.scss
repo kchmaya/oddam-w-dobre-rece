@@ -1,0 +1,130 @@
+@import 'settings/colors';
+@import 'settings/fonts';
+
+.contact-section {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  color: $color-dark-brown;
+
+  &:after {
+    content: "";
+    background: url('../assets/Background-Contact-Form.jpg') no-repeat;
+    opacity: 0.2;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .contact-form {
+    padding: 8rem;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    .contact-title {
+      font-size: 2.2rem;
+      font-weight: 400;
+      margin-bottom: 2rem;
+    }
+
+    .contact-decoration {
+      margin-bottom: 3rem;
+    }
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+
+    .form-personal {
+      display: flex;
+      justify-content: space-between;
+
+      label {
+        font-size: 1rem;
+        font-weight: 600;
+
+        input {
+          background: none;
+          border: none;
+          border-bottom: 1.2px solid $color-grey;
+          margin-top: 1rem;
+          padding-bottom: 0.25rem;
+          width: 93%;
+          color: $color-dark-brown;
+          font-size: 1rem;
+          outline: none;
+        }
+
+        input::placeholder {
+          color: lightgray;
+          font-size: 1rem;
+        }
+
+        p {
+          font-size: 0.75rem;
+          padding-top: 0.15rem;
+        }
+      }
+    }
+
+    .form-textarea {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+
+      font-size: 1rem;
+      font-weight: 600;
+
+      textarea {
+        background: none;
+        border: none;
+        border-bottom: 1px solid $color-grey;
+        height: 6rem;
+        margin-top: 1rem;
+        overflow: hidden;
+        padding-bottom: 0.25rem;
+        color: $color-dark-brown;
+        font-size: 1rem;
+        font-family: $font-base;
+        outline: none;
+        resize: none
+      }
+
+      textarea::placeholder {
+        font-family: $font-base;
+        color: lightgray;
+        font-size: 1rem;
+      }
+
+      p {
+        font-size: 0.75rem;
+        padding-top: 0.15rem;
+      }
+    }
+
+    .contact-form-btn {
+      align-self: flex-end;
+      background: none;
+      border: 1px solid $color-grey;
+      height: 3rem;
+      width: 9rem;
+      outline: none;
+      margin-top: 2rem;
+      font-size: 1.1rem;
+      color: $color-grey;
+      cursor: pointer;
+      transition: all ease 0.1s;
+    }
+
+    .contact-form-btn:active {
+      box-shadow: 1px 1px 2px $color-grey;
+    }
+  }
+}

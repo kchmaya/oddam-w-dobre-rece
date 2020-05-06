@@ -1,0 +1,35 @@
+@import 'settings/colors';
+
+.header {
+  display: flex;
+  flex-direction: column;
+  margin: 2.5rem 8rem 0 9rem;
+
+  .header-login {
+    font-size: 0.875rem;
+    margin: 0 0 0.8rem 0;
+
+    ul {
+      display: flex;
+      justify-content: flex-end;
+
+      li {
+        padding: 0.5rem 1rem;
+        border: 1px solid transparent;
+
+        .header-login-nav {
+          color: $color-grey;
+          text-decoration: none;
+        }
+      }
+
+      li:hover {
+        border: 1px solid $color-yellow;
+      }
+
+      .user-email:hover {
+        border: 1px solid transparent;
+      }
+    }
+  }
+}

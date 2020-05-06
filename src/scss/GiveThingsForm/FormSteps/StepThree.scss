@@ -1,0 +1,90 @@
+@import '../../settings/colors';
+
+.step-three-section {
+  margin-left: 7rem;
+
+  .step-number {
+    font-size: 26px;
+    font-weight: 300;
+    color: $color-dark-brown;
+    padding: 3rem 0 1.5rem 0;
+  }
+
+  .step-three-title {
+    font-size: 34px;
+    font-weight: 600;
+    padding: 1.5rem 0 1.5rem 0;
+  }
+
+  form {
+    margin-bottom: 2rem;
+
+    .city-select {
+      width: 18rem;
+      height: 3.5rem;
+      appearance: none;
+      background: transparent url('../../../assets/Icon-Arrow-Down.svg') no-repeat right;
+      border: 1px solid $color-grey;
+      outline: none;
+      font-size: 23px;
+      font-weight: 300;
+      padding: 3px 12px;
+      margin-bottom: 1.5rem;
+
+      .option {
+        font-size: 23px;
+        font-weight: 300;
+        background: transparent;
+      }
+    }
+
+    .help-select-title {
+      font-size: 23px;
+      font-weight: 600;
+      padding: 1.5rem 0 1.5rem 0;
+    }
+
+    .help-select {
+      display: inline-block;
+      font-size: 23px;
+      font-weight: 300;
+      cursor: pointer;
+      position: relative;
+      margin: 1rem 0 1rem 0rem;
+
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+      }
+
+      .step-three-check {
+        padding: 8px 18px;
+        border: 1px solid $color-grey;
+        margin: 0 1rem 1rem 0;
+      }
+    }
+
+    .help-select input:checked ~ .step-three-check {
+      background-color: $color-yellow;
+    }
+  }
+
+  .help-select-option {
+    width: 33.5rem;
+    height: 2.5rem;
+    margin-top: 1.5rem;
+    background: transparent;
+    border: 1px solid $color-grey;
+    font-size: 23px;
+    outline: none;
+    padding: 2px 8px 2px 8px;
+  }
+
+  .help-option-title {
+    font-size: 23px;
+    font-weight: 600;
+    position: relative;
+    top: 1.5rem;
+  }
+}

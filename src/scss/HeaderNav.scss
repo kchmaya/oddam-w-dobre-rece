@@ -1,0 +1,37 @@
+@import 'settings/colors';
+
+.header-nav {
+  display: flex;
+  flex-direction: column;
+  margin: 0 8rem 1.5rem 9rem;
+
+  .header-menu {
+    font-size: 1rem;
+    margin: 0;
+
+    ul {
+      display: flex;
+      justify-content: flex-end;
+
+      li {
+        margin: 0 0.5rem;
+        padding: 0.5rem 1rem;
+        border: 1px solid transparent;
+
+        .start-btn, .nav-btn {
+          text-decoration: none;
+          color: inherit;
+        }
+
+        &:hover {
+          cursor: pointer;
+          border: 1px solid $color-black;
+        }
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

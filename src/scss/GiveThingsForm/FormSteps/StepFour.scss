@@ -1,0 +1,74 @@
+@import '../../settings/colors';
+@import '../../settings/fonts';
+
+.step-four-section {
+  margin-left: 7rem;
+
+  .step-number {
+    font-size: 26px;
+    font-weight: 300;
+    color: $color-dark-brown;
+    padding: 3rem 0 1.5rem 0;
+  }
+
+  .step-four-title {
+    font-size: 34px;
+    font-weight: 600;
+    padding: 1.5rem 0 1.5rem 0;
+  }
+
+  .step-four-info {
+    display: flex;
+    width: 57rem;
+    justify-content: space-between;
+
+    .info-box {
+      display: flex;
+      flex-direction: column;
+
+      .info-title {
+        font-size: 23px;
+        font-weight: 600;
+        padding: 1.5rem 0 1.5rem 0;
+      }
+
+      .info-details {
+        width: 25rem;
+        margin-bottom: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        label {
+          font-size: 23px;
+          font-weight: 300;
+        }
+
+        input {
+          width: 17rem;
+          height: 2.5rem;
+          background: transparent;
+          border: 1px solid $color-grey;
+          font-size: 20px;
+          outline: none;
+          padding: 2px 8px 2px 8px;
+        }
+      }
+
+      .textarea {
+        align-items: start;
+
+        textarea {
+          width: 23rem;
+          height: 9rem;
+          background: transparent;
+          border: 1px solid $color-grey;
+          font-size: 20px;
+          outline: none;
+          padding: 5px 8px 5px 8px;
+          font-family: $font-base;
+        }
+      }
+    }
+  }
+}

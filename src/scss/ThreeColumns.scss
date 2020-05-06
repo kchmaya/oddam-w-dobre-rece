@@ -1,0 +1,35 @@
+@import 'settings/colors';
+@import 'settings/fonts';
+
+.three-columns-section {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  background: $color-yellow;
+  color: $color-brown;
+  padding: 3.5rem 2rem;
+
+  .column {
+    width: 25rem;
+  }
+
+  .column-numbers {
+    font-size: 5.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+  }
+
+  .column-subtitle {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+
+  .column-description {
+    font-family: $font-alt;
+    font-weight: 300;
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}

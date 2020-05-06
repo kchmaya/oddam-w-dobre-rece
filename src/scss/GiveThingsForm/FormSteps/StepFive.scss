@@ -1,0 +1,70 @@
+.step-five-section {
+  margin-left: 7rem;
+  width: 70rem;
+
+  .step-five-title {
+    font-size: 34px;
+    font-weight: 600;
+    padding: 3rem 0 1.5rem 0;
+  }
+
+  .info-title {
+    font-size: 23px;
+    font-weight: 600;
+    padding: 1.5rem 0 1.5rem 0;
+  }
+
+  .step-five-info {
+
+    .things-info {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      .step-five-icon {
+        width: 3.5rem;
+        height: 3.5rem;
+        margin-right: 2rem;
+      }
+
+      .things-data {
+        font-size: 23px;
+      }
+    }
+  }
+
+  .location-info {
+    display: flex;
+    width: 57rem;
+    justify-content: space-between;
+
+    .location-info-box {
+      display: flex;
+      flex-direction: column;
+
+      .info-title {
+        font-size: 23px;
+        font-weight: 600;
+        padding: 1.5rem 0 1.5rem 0;
+      }
+
+      .location-details {
+        width: 25rem;
+        margin-bottom: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .location-title {
+          font-size: 23px;
+          font-weight: 300;
+        }
+
+        .location-data {
+          font-size: 23px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}

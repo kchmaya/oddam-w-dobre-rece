@@ -1,0 +1,75 @@
+@import 'settings/colors';
+@import 'settings/fonts';
+
+.steps-section {
+  color: $color-dark-brown;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .steps-title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    padding-top: 1.5rem;
+    margin: 2rem;
+    text-align: center;
+  }
+
+  .steps-decoration {
+    padding-bottom: 3rem;
+    margin: 0 auto;
+  }
+
+  .steps-columns {
+    display: flex;
+    justify-content: center;
+    background: $color-light-grey;
+    padding: 2rem 4rem;
+    width: 100%;
+
+    .step {
+      margin: 3rem;
+      padding: 0 1rem;
+      width: 12rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      .step-icon {
+        margin-bottom: 1rem;
+      }
+
+      .step-title {
+        font-size: 1.15rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .dash {
+        border: 0.8px solid $color-grey;
+        width: 5rem;
+        margin-bottom: 0.75rem;
+      }
+    }
+  }
+
+  .steps-btn {
+    border: 1px solid $color-grey;
+    font-size: 2rem;
+    margin: 3rem 4rem;
+    padding: 1rem 6rem;
+    text-align: center;
+
+    .steps-btn-link {
+      color: $color-dark-brown;
+      text-transform: uppercase;
+      font-weight: 300;
+      text-decoration: none;
+
+      span {
+        display: block;
+      }
+    }
+  }
+}

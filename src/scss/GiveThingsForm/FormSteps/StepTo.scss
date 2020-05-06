@@ -1,0 +1,48 @@
+@import '../../settings/colors';
+
+.step-two-section {
+
+  .step-number {
+    font-size: 26px;
+    font-weight: 300;
+    color: $color-dark-brown;
+    padding: 3rem 0 1.5rem 7rem;
+  }
+
+  .step-two-title {
+    font-size: 34px;
+    font-weight: 600;
+    padding: 1.5rem 0 2rem 7rem;
+  }
+
+  .step-two-select {
+    display: flex;
+    align-items: center;
+    padding: 2rem 0 0 7rem;
+  }
+
+  .select-text {
+    margin-right: 2rem;
+    font-size: 23px;
+    font-weight: 300;
+  }
+
+  .nmb-of-bags {
+    width: 17rem;
+    height: 3.5rem;
+    appearance: none;
+    background: transparent url('../../../assets/Icon-Arrow-Down.svg') no-repeat right;
+    border: 1px solid $color-grey;
+    outline: none;
+    font-size: 23px;
+    font-weight: 300;
+    padding: 6px 12px;
+
+    .option {
+      font-size: 23px;
+      font-weight: 300;
+      background: transparent;
+    }
+  }
+}
+

@@ -1,12 +1,19 @@
-import React, { Component } from "react";
-// import { NavLink } from "react-router-dom";
-
+import React, {Component} from 'react';
+import {NavLink} from 'react-router-dom';
 
 class Logout extends Component {
     render() {
-        return <h1> Logout </h1>;
+        return (
+            <div className='logout-section'>
+                <div className='logout-box'>
+                    <p className='logout-text'> Wylogowanie nastąpiło <br/> pomyślnie! </p>
+                    <img src={require('../../assets/Decoration.svg')} alt=''
+                         className='logout-decoration'/>
+                    <NavLink className='logout-btn' to='/'> Strona główna </NavLink>
+                </div>
+            </div>
+        )
     }
 }
-
 
 export default Logout;
